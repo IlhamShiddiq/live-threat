@@ -8,6 +8,7 @@ const authRouter = require("./app/routes/auth.route");
 const dataRouter = require("./app/routes/data.route");
 const surveyRouter = require("./app/routes/survey.route");
 const dataController = require("./app/controllers/data.controller");
+const db = require('./app/models');
 
 dotenv.config();
 const app = express();
@@ -21,7 +22,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Database Connection
-const db = require("./app/models");
 db.sequelize.sync();
 
 // Routes
