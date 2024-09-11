@@ -21,14 +21,14 @@ const getSurveys = async (req, res) => {
             success: true,
             message: 'Get data success',
             data: total
-        })
+        });
     } catch (e) {
         console.log(e)
         res.json({
             status: 500,
             success: false,
             message: 'Internal server error',
-        })
+        });
     }
 }
 
@@ -69,12 +69,12 @@ const storeSurvey = async (req, res) => {
         });
     } catch (e) {
         t.rollback();
-        console.error(e)
+        console.error(e);
         res.json({
             status: 500,
             success: false,
             message: 'Internal server error',
-        })
+        });
     }
 }
 

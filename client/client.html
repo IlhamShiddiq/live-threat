@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is client</title>
+</head>
+<body>
+    <h1>Client</h1>
+</body>
+<script>
+    const socket = new WebSocket('ws://localhost:3000')
+
+    socket.addEventListener('open', (event) => {
+        console.log('Connected to web socket');
+    })
+</script>
+</html>
