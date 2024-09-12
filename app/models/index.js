@@ -1,6 +1,6 @@
-const config = require("../config/db.config");
+const config = require('../config/db.config');
 
-const Sequelize = require("sequelize");
+const Sequelize = require('sequelize');
 const sequelize = new Sequelize(config.pg.DB, config.pg.USER, config.pg.PASSWORD, {
   port: config.pg.PORT,
   host: config.pg.HOST,
@@ -19,21 +19,5 @@ const db = {};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-
-// define model example
-// db.user = require("../models/User")(sequelize, Sequelize);
-
-// relation example
-// relation between role and user
-// db.role.hasMany(db.user, {
-//   as: "users",
-//   onDelete: "cascade",
-//   onUpdate: "cascade",
-// });
-
-// db.user.belongsTo(db.role, {
-//   foreignKey: "roleId",
-//   as: "role",
-// });
 
 module.exports = db;
