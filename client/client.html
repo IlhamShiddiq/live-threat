@@ -8,7 +8,9 @@
     <h1>Client</h1>
 </body>
 <script>
-    const socket = new WebSocket('ws://localhost:3000')
+    // TODO: Adjust your APP PORT here
+    const APP_PORT = 3000;
+    const socket = new WebSocket(`ws://localhost:${APP_PORT}`);
 
     socket.addEventListener('open', (event) => {
         console.log('Connected to web socket');

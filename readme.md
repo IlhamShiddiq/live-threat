@@ -14,7 +14,7 @@ npm run start
 ```
 
 ## Web Socket Client
-To trigger functionality for web socket method in the backend side, you can open `client/client.html` in your browser.
+To trigger functionality for web socket method in the backend side, you can open `client/client.html` in your browser. Adjust your `APP_PORT` inside that file.
 
 After that, live threat attacks data will be triggered every 3 minutes.
 
